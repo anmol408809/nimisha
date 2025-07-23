@@ -1,0 +1,133 @@
+.dock-outer {
+  position: relative;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.dock-outer.dock-vertical {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: auto;
+}
+
+.dock-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 4px 8px;
+  background: transparent;
+  backdrop-filter: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.dock-panel.dock-panel-vertical {
+  flex-direction: column;
+  padding: 8px 4px;
+}
+
+.dock-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: transparent;
+  backdrop-filter: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.dock-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dock-item:focus {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+.navbar-dock .dock-panel {
+  background: transparent !important;
+}
+
+.dock-item-active {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+.dock-item-active .dock-icon {
+  color: rgb(6, 182, 212) !important;
+}
+
+.dock-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.2s ease;
+}
+
+.dock-item:hover .dock-icon {
+  color: rgba(255, 255, 255, 1);
+}
+
+.dock-label {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 8px;
+  padding: 4px 8px;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+/* Transparent navbar specific styles */
+.navbar-dock-transparent .dock-panel {
+  background: transparent !important;
+  border: none !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+  justify-content: space-between !important;
+}
+
+.navbar-dock-transparent .dock-item {
+  background: transparent !important;
+  border: none !important;
+  backdrop-filter: none !important;
+}
+
+.navbar-dock-transparent .dock-item:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.navbar-dock-transparent .dock-icon {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.navbar-dock-transparent .dock-item:hover .dock-icon {
+  color: white !important;
+}
+
+.navbar-dock-transparent .dock-label {
+  background: rgba(0, 0, 0, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}

@@ -1,0 +1,38 @@
+.circular-gallery {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background: transparent;
+  margin-top: -100px; /* Brings gallery closer to content above */
+  padding-bottom:200px;
+  margin-bottom: 500px; /* Adds space below the gallery */
+  font-family: sans-serif; /* Sets a basic, normal font */
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.circular-gallery canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  cursor: grab;
+}
+
+.circular-gallery canvas:active {
+  cursor: grabbing;
+}
+
+.no-js .circular-gallery {
+  display: none;
+}
+
+/* Universal box-sizing for easier layout calculations */
+.circular-gallery * {
+  box-sizing: border-box;
+  /* Removed margin-bottom from here to avoid unwanted spacing on every element */
+}

@@ -1,0 +1,63 @@
+.card-swap-container {
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 16px;
+  background: rgba(31, 41, 55, 0.8);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 24px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+  border-color: rgba(34, 211, 238, 0.3);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4), 0 0 24px rgba(34, 211, 238, 0.1);
+}
+
+.card h3 {
+  margin: 0 0 16px 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, rgb(34, 211, 238), rgb(168, 85, 247));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.card h4 {
+  margin: 0 0 8px 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+}
+
+.card p {
+  margin: 0 0 8px 0;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.card .grade-info {
+  color: rgb(34, 211, 238);
+  font-weight: 600;
+}
+
+.card .school-info {
+  color: rgb(168, 85, 247);
+  font-weight: 500;
+}
+
+.card .date-info {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
